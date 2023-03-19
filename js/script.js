@@ -155,15 +155,15 @@ function showResult(){
     const scoreText = result_box.querySelector(".score_text");
     if (userScore > 10){
        
-        let scoreTag = '<span>and congrats '+userName +'! 🎉, You got '+ userScore +'</p> out of <p>'+ questions.length +'</p></span>';
+        let scoreTag = '<span>and congrats '+userName +'! 🎉, You got '+ userScore +'out of '+ questions.length +'</p></span>';
         scoreText.innerHTML = scoreTag;  
     }
     else if(userScore > 7){
-        let scoreTag = '<span>and nice 😎, '+userName+' You got '+ userScore +'</p> out of <p>'+ questions.length +'</p></span>';
+        let scoreTag = '<span>and nice 😎, '+userName+' You got '+ userScore +' out of '+ questions.length +'</p></span>';
         scoreText.innerHTML = scoreTag;
     }
     else{ 
-        let scoreTag = '<span>and sorry 😐, '+userName +' You got only '+ userScore +'</p> out of <p>'+ questions.length +'</p></span>';
+        let scoreTag = '<span>and sorry 😐, '+userName +' You got only '+ userScore +' out of '+ questions.length +'</p></span>';
         scoreText.innerHTML = scoreTag;
     }
 
