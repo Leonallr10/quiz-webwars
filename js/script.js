@@ -1,4 +1,3 @@
-
 let userName = prompt("Please enter your name:");
 
 
@@ -155,15 +154,36 @@ function showResult(){
     const scoreText = result_box.querySelector(".score_text");
     if (userScore > 10){
        
-        let scoreTag = '<span>and congrats '+userName +'! 🎉, You got '+ userScore +'out of '+ questions.length +'</p></span>';
+        let scoreTag = '<p style="text-align: center;">' +
+  '<span style="display: inline-block; padding: 10px; background-color: #f0f0f0;">' +
+  'Congratulations <b>' + userName + '</b>! 🎉<br>' +
+  'You got ' + userScore + ' out of ' + questions.length +
+  '</span>' +
+  '</p>';
         scoreText.innerHTML = scoreTag;  
     }
     else if(userScore > 7){
-        let scoreTag = '<span>and nice 😎, '+userName+' You got '+ userScore +' out of '+ questions.length +'</p></span>';
+        let scoreTag = '<div style="text-align: center;">' +
+  '<p>' +
+  '<span style="display: inline-block; padding: 10px; background-color: #f0f0f0;">' +
+  'And nice 😎, <b>' + userName + '</b>! <br>' +
+  'You got ' + userScore + ' out of ' + questions.length +
+  '</span>' +
+  '</p>' +
+  '</div>';
+
         scoreText.innerHTML = scoreTag;
     }
     else{ 
-        let scoreTag = '<span>and sorry 😐, '+userName +' You got only '+ userScore +' out of '+ questions.length +'</p></span>';
+        let scoreTag = '<div style="text-align: center;">' +
+  '<p>' +
+  '<span style="display: inline-block; padding: 10px; background-color: #f0f0f0;">' +
+  'And sorry 😐, <b>' + userName + '</b>!<br>' +
+  'You got only ' + userScore + ' out of ' + questions.length +
+  '</span>' +
+  '</p>' +
+  '</div>';
+
         scoreText.innerHTML = scoreTag;
     }
 
